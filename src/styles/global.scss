@@ -1,7 +1,226 @@
-$base-color: #c6538c;
-$color: rgba(0,34,35, 0.3);
+$base-color: #9b416e;
+$color: rgba(0,34,35, 1);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+$color-primary: hsl(176, 50%, 47%);
+$color-primary-dark: hsl(176, 72%, 28%);
+$color-neutral: hsl(0, 0%, 0%);
+$color-neutral-grey: hsl(0, 0%, 48%);
+
+html {
+    font-size: 62.5%;
+}
 
 body {
-    background-color: $base-color;
-    color: $color;
+    font-family: 'Commissioner', sans-serif;
+    background-color:#efeeee;
+}
+.header {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-image: url('../images/image-hero-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header div {
+    display: flex;
+    justify-content: space-between;
+}
+.header__figure {
+    width: 30px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__figure img {
+    width: 18px;
+    height: 15px;
+}
+.header__title {
+    display: flex;
+    align-items: center;
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.header__nav {
+    display: none;
+}
+.main {
+    padding: 0 20px;
+    margin-top: -50px;
+}
+.main__section-one {
+    width: 100%;
+    border-radius: 10px;
+    padding: 50px 20px 30px;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section-one__pic {
+    position: absolute;
+    top: -28px;
+    left: calc(100% - 50% - 28px);
+}
+.section-one__title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+.section-one__description {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    line-height: 2.5rem;
+    color: $color-neutral-grey;
+}
+.section-one__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link__button {
+    width: 230px;
+    height: 56px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: $color-primary;
+}
+.main__section-two {
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+.section-two__item-container {
+    width: 100%;
+    padding: 10px;
+}
+.section-two__item-container div {
+    width: 70px;
+    height: 30px;
+    margin: 0 auto;
+    border-bottom: 2px solid $color-neutral-grey;
+    opacity: 0.5;
+}
+.item-price {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.item-back {
+    font-size: 1.4rem;
+    color: $color-neutral-grey;
+}
+.out-line {
+    width: 100%;
+    height: 13px;
+    margin: 30px 0 20px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+.in-line {
+    width: 75%;
+    height: 13px;
+    border-radius: 10px;
+    background-color: $color-primary;
+}
+
+.main__section-three {
+    width: 100%;
+    border-radius: 10px;
+    padding: 50px 25px 30px;
+    margin-bottom: 25px;
+    position: relative;
+    background-color: #fff;
+}
+.section-three__title {
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+    font-size: 2rem;
+}
+.section-three__description {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 0.2px;
+    line-height: 2.5rem;
+    color: $color-neutral-grey;
+    opacity: 0.9;
+}
+
+.section-three__article {
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.article__title {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+.article__price {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: $color-primary;
+}
+.article__description {
+    margin-bottom: 25px;
+    letter-spacing: 0.3px;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    color: $color-neutral-grey;
+    opacity: 0.9;
+}
+.article__stats {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.article__stats span {
+    margin-left: 10px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $color-neutral-grey;
+    opacity: 0.9;
+}
+.article__button {
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: $color-primary;
+}
+.article__button-grey {
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: $color-neutral-grey;
+}
+
+.section-three__article:nth-of-type(3) {
+    opacity: 0.4;
 }

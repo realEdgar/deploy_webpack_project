@@ -42,6 +42,12 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(jpg|png|svg)$/i,
+                use: [
+                    { loader: 'file-loader' }
+                ]
             }
         ]
     },
@@ -53,7 +59,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+              { from: "src/images", to: "dist" },
+            ],
+        }),
     ],
     optimization: {
         minimize: true,
