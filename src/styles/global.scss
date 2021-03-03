@@ -1,20 +1,18 @@
-$base-color: #9b416e;
-$color: rgba(0,34,35, 1);
+$color-primary: hsl(176, 50%, 47%);
+$color-primary-dark: hsl(176, 72%, 28%);
+$color-neutral: hsl(0, 0%, 0%);
+$color-neutral-grey: hsl(0, 0%, 48%);
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-$color-primary: hsl(176, 50%, 47%);
-$color-primary-dark: hsl(176, 72%, 28%);
-$color-neutral: hsl(0, 0%, 0%);
-$color-neutral-grey: hsl(0, 0%, 48%);
+
 
 html {
     font-size: 62.5%;
 }
-
 body {
     font-family: 'Commissioner', sans-serif;
     background-color:#efeeee;
