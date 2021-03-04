@@ -254,3 +254,42 @@ body {
 .section-three__article:nth-of-type(3) {
     opacity: 0.4;
 }
+
+.container__modal {
+    width: 100%;
+    padding: 40px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    .container__img {
+        margin-bottom: 25px;
+    }
+    .btm {
+        width: 120px;
+        height: 50px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: $color-primary;
+    }
+}
+
+.modal__title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.modal__description {
+    margin-bottom: 30px;
+    letter-spacing: 0.2px;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: $color-neutral-grey;
+    opacity: 0.9;
+    text-align: center;
+}
