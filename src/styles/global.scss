@@ -21,6 +21,7 @@ body {
     width: 100%;
     height: 300px;
     padding: 20px;
+    position: relative;
     background-image: url('../images/image-hero-mobile.jpg');
     background-position: center;
     background-size: cover;
@@ -30,17 +31,24 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.header__figure {
+.header__menu {
     width: 30px;
     height: 43px;
+    border: none;
+    outline-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
+    img {
+        width: 18px;
+        height: 15px;
+    }
+    img:hover {
+        opacity: 0.7;
+    }
 }
-.header__figure img {
-    width: 18px;
-    height: 15px;
-}
+
 .header__title {
     display: flex;
     align-items: center;
@@ -49,15 +57,34 @@ body {
 }
 
 .header__nav {
-    width: 100%;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
     height: 260px;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    top: 65px;
+    left: calc(80% - 70vw);
     z-index: 2;
+    
+}
+
+.nav__button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -50px;
+    right: calc(50% - 20px);
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;    
 }
 
 .nav__list {
@@ -83,8 +110,10 @@ body {
 }
 
 .main {
-    padding: 0 20px;
+    padding: 0 20px 20px;
+    margin: 0 auto;
     margin-top: -50px;
+    max-width: 500px;
 }
 
 .main__section-one {
@@ -251,7 +280,7 @@ body {
     background-color: $color-neutral-grey;
 }
 
-.section-three__article:nth-of-type(3) {
+.section-three__article:nth-of-type(4) {
     opacity: 0.4;
 }
 
@@ -263,6 +292,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
     background-color: #fff;
     .container__img {
         margin-bottom: 25px;
