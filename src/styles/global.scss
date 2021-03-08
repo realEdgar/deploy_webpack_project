@@ -16,6 +16,7 @@ html {
 body {
     font-family: 'Commissioner', sans-serif;
     background-color:#efeeee;
+    min-width: 375px;
 }
 .header {
     width: 100%;
@@ -46,6 +47,7 @@ body {
     }
     img:hover {
         opacity: 0.7;
+        cursor: pointer;
     }
 }
 
@@ -113,7 +115,7 @@ body {
     padding: 0 20px 20px;
     margin: 0 auto;
     margin-top: -50px;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .main__section-one {
@@ -156,6 +158,14 @@ body {
     color: #fff;
     background-color: $color-primary;
 }
+
+.link__pic {
+    display: flex;
+    align-items: center;
+}
+.bockmarked {
+    display: none;
+}
 .main__section-two {
     width: 100%;
     border-radius: 10px;
@@ -172,7 +182,7 @@ body {
     width: 70px;
     height: 30px;
     margin: 0 auto;
-    border-bottom: 2px solid $color-neutral-grey;
+    border-bottom: 1px solid $color-neutral-grey;
     opacity: 0.5;
 }
 .item-price {
@@ -192,7 +202,7 @@ body {
     background-color: #f1f1f1;
 }
 .in-line {
-    width: 75%;
+    width: 85%;
     height: 13px;
     border-radius: 10px;
     background-color: $color-primary;
@@ -280,7 +290,7 @@ body {
     background-color: $color-neutral-grey;
 }
 
-.section-three__article:nth-of-type(4) {
+.section-three__article:nth-of-type(3) {
     opacity: 0.4;
 }
 
@@ -292,7 +302,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
     background-color: #fff;
     .container__img {
         margin-bottom: 25px;
@@ -322,4 +331,80 @@ body {
     color: $color-neutral-grey;
     opacity: 0.9;
     text-align: center;
+}
+
+@media (min-width: 700px) {
+    .header {
+        width: 100%;
+        background-image: url('../images/image-hero-desktop.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        div {
+            padding: 0 100px;
+            .header__title {
+                font-size: 3.4rem;
+            }
+        }
+    }
+    .link__button:hover  {
+        background-color: $color-primary-dark;
+    }
+    .link__pic {
+        padding-right: 15px;
+        border-radius: 50px;
+        background-color: #e5e1e1;
+        opacity: 0.4;
+    }
+    .bookmarker {
+        margin-right: 10px;
+    }
+    .bockmarked {
+        display: block;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+    .stats-container {
+        display: flex;
+    }
+    .section-two__item-container {
+        position: relative;
+    }
+    .section-two__item-container div {
+        width: 60px;
+        height: 70px;
+        position: absolute;
+        transform: rotate(270deg);
+        right: 0;
+        bottom: 5px;
+
+    }
+    .article__button:hover {
+        background-color: $color-primary-dark;
+    }
+    .align-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__nav-second {
+        display: flex;
+        align-items: center;
+        .nav__list-second {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: white;
+                padding: 5px;
+                margin-right: 10px;
+            }
+            a:hover {
+                text-decoration: underline;
+                opacity: 0.5;
+            }
+        }
+    }
 }

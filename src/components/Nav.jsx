@@ -1,18 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
-export const Nav = (props) => {
-    if(!props.isOpen) {
-        return null
-    }
+class Nav extends React.Component {
 
-    return ReactDOM.createPortal(              
-        <nav className="header__nav" >
-            <button className="nav__button">X</button>
-            <ul className="nav__list">
-                { props.children }
-            </ul>
-        </nav>, 
-        document.getElementById('app')
-    )
+    render() {
+        return (              
+            <nav className="header__nav" >
+                <button className="nav__button" onClick={this.handleClick}>X</button>
+                <ul className="nav__list">
+                    { this.props.children }
+                </ul>
+            </nav>
+        )
+    }    
 }
+
+export default Nav
