@@ -1,10 +1,11 @@
 import React from 'react'
 import iconMenu from '../images/icon-hamburger.svg'
-import Nav from '../components/Nav'
+// import Nav from '../components/Nav'
 import { useMediaQuery } from 'react-responsive'
 
 const Header = () => {
-    const isDesktopOrNot = useMediaQuery( { query: '(min-device-width: 700px)' } )
+    const isDesktop = useMediaQuery( { query: '(min-device-width: 700px)' } )
+    const isDesktopMax = useMediaQuery( { query: '(max-width: 1440px)' } )
     const isMobile = useMediaQuery( { query: '(min-device-width: 320px)' } )
     const isMobileMax = useMediaQuery( { query: '(max-width: 699px)' })
     return (
@@ -14,10 +15,9 @@ const Header = () => {
                 { (isMobile && isMobileMax) && 
                     <button className="header__menu">
                         <img src={ iconMenu } alt="Hamburger menu" />
-                    </button> 
-                }
-                
-                { isDesktopOrNot &&
+                    </button>
+                }             
+                { (isDesktop && isDesktopMax) &&
                     <nav className="header__nav-second">
                         <ul className="nav__list-second">
                             <li><a href="/" >About</a></li>
@@ -25,7 +25,7 @@ const Header = () => {
                             <li><a href="/" >Get started</a></li>
                         </ul>
                     </nav>
-                }                 
+                }
             </div>            
         </header>
     ) 

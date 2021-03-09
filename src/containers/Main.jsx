@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackProject } from '../components/BackProject'
+import BackProject from '../components/BackProject'
 import { Stats } from '../components/Stats'
 import { About } from '../components/About'
 import { Sucess } from '../components/Sucess'
