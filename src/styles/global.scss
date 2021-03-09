@@ -59,9 +59,7 @@ body {
 }
 
 .header__nav {
-    width: 80%;
-    min-width: 320px;
-    max-width: 400px;
+    width: 300px;
     margin: 0 auto;
     height: 260px;
     padding: 20px;
@@ -71,9 +69,8 @@ body {
     justify-content: center;
     position: absolute;
     top: 65px;
-    left: calc(50% - 200px);
-    z-index: 2;
-    
+    left: calc(50% - 150px);
+    z-index: 2;    
 }
 
 .nav__button {
