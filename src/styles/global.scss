@@ -60,7 +60,8 @@ body {
 
 .header__nav {
     width: 80%;
-    max-width: 500px;
+    min-width: 320px;
+    max-width: 400px;
     margin: 0 auto;
     height: 260px;
     padding: 20px;
@@ -70,7 +71,7 @@ body {
     justify-content: center;
     position: absolute;
     top: 65px;
-    left: calc(80% - 70vw);
+    left: calc(50% - 200px);
     z-index: 2;
     
 }
@@ -83,9 +84,10 @@ body {
     right: calc(50% - 20px);
     padding: 5px;
     border: none;
+    outline: none;
     border-radius: 50%;
     color: #fff;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     z-index: 3;    
 }
 
@@ -108,6 +110,10 @@ body {
         text-decoration: none;
         color: black;
         font-size: 1.6rem;
+    }
+    a:hover {
+        opacity: 0.7;
+        text-decoration: underline;
     }
 }
 
@@ -278,6 +284,7 @@ body {
     width: 160px;
     height: 50px;
     border: none;
+    outline: none;
     border-radius: 50px;
     font-size: 1.4rem;
     font-weight: 600;
@@ -344,10 +351,6 @@ body {
 @media (min-width: 700px) {
     .header {
         width: 100%;
-        background-image: url('../images/image-hero-desktop.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
         div {
             padding: 0 100px;
             .header__title {
@@ -396,8 +399,27 @@ body {
     .align-container {
         display: flex;
         justify-content: space-between;
+    }     
+}
+.border {
+    opacity: 1;
+    img {
+        color: $color-primary-dark;
     }
+    span {
+        color: $color-primary-dark;
+        font-weight: bold;
+    }
+}
 
+@media (min-width: 900px) {
+    .header {
+        width: 100%;
+        background-image: url('../images/image-hero-desktop.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .header__nav-second {
         display: flex;
         align-items: center;
@@ -418,15 +440,5 @@ body {
                 opacity: 0.5;
             }
         }
-    }    
-}
-.border {
-    opacity: 1;
-    img {
-        color: $color-primary-dark;
-    }
-    span {
-        color: $color-primary-dark;
-        font-weight: bold;
-    }
+    }   
 }

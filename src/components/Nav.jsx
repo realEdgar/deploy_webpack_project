@@ -1,17 +1,19 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
-class Nav extends React.Component {
+const Modal = (props) => {
 
-    render() {
-        return (              
-            <nav className="header__nav" >
-                <button className="nav__button" onClick={this.handleClick}>X</button>
-                <ul className="nav__list">
-                    { this.props.children }
-                </ul>
-            </nav>
-        )
-    }    
+    if(!props.isOpen) {
+        return null
+    }
+    return ReactDOM.createPortal(                     
+        <nav className="header__nav" >
+            <button className="nav__button" onClick={props.onClose} >X</button>
+            <ul className="nav__list">
+                { props.children }
+            </ul>
+        </nav>, document.getElementById('app')
+    )   
 }
 
-export default Nav
+export default Modal
